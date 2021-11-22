@@ -188,7 +188,7 @@ nav a:hover i{
 
 .body h1{
     text-align: center;
-    margin-top: 0.5em;
+    margin-top: 1em;
 }
 .hub p, .hub a{
     line-height: 0;
@@ -222,6 +222,11 @@ nav a:hover i{
         color: var(--primarycolor);
         background: var(--tertiarycolor);
     }
+}
+
+.sportimgs div:hover{
+    background-color: var(--secondarycolor);
+    transition: var(--maintransition);
 }
 
 .sportimgs{
