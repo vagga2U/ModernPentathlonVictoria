@@ -1,0 +1,280 @@
+
+* {
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif; 
+    box-sizing: border-box;
+    margin: 0;
+    }
+
+:root{
+        --primarycolor: rgb(40,40,100);
+        --secondarycolor: white;
+        --tertiarycolor: rgb(255,200,0);
+        --quarternarycolor: rgb(100,100,100);
+        --maintransition: all 0.4s linear;
+    }    
+p, h1,h2,h3,h4,a{
+    padding: 10px;
+}
+
+h4{
+    line-height: 0px;
+}
+tr{
+    border-style: solid;
+}
+
+td, th{
+    padding: 0.5rem;
+    outline: solid;
+}
+
+img{
+    max-width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondarycolor);
+}
+
+.indent{
+    padding-left: 2em;
+}
+
+.columngroup{
+    display: flex;
+}
+
+.column{
+    flex: 50%;
+}
+
+.body a{
+    color: blue;
+    padding: 0;
+}
+
+.hubs{
+    padding: 10px;
+}
+
+#topbutton{
+    background-color: var(--primarycolor);
+    margin: 0.4vw;
+    padding: 1em;
+    margin-top: 1em;
+    display: inline-block;
+    color: var(--secondarycolor)
+}
+#topbutton:hover{
+    background-color: var(--quarternarycolor);
+}
+
+a:hover{
+    color: lightgrey;
+    transition:var(--maintransition);
+}
+
+br{
+    clear: both;
+}
+header,.footer{
+    background-color:var(--primarycolor);
+    color: white;
+    padding: 0.2em;
+    margin: 0;
+    width: 100%;
+}
+
+header{
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo img{
+    height: 5vh;
+    max-width: 80vw;
+}
+
+nav img{
+    width: 1em;
+}
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+.nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-label span,.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: var(--secondarycolor);
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--primarycolor);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: var(--secondarycolor);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+nav a:hover {
+    color:var(--quarternarycolor);
+}
+nav a:hover i{
+    color:var(--secondarycolor);
+}
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.body h1{
+    text-align: center;
+    margin-top: 0.5em;
+}
+.hub p, .hub a{
+    line-height: 0;
+}
+.sportimgs img {
+    width: calc(45% - 2.4em);
+}
+
+
+.sportimgs div {
+    font-size: 2vw;
+    margin: 1%;
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+    border: solid;
+    border-radius: 2em;
+    color: var(--primarycolor);
+    background: var(--tertiarycolor);
+}
+
+@media screen and (min-width: 350px){
+    .sportimgs div {
+        font-size: 1vw;
+        margin: 1%;
+        width: calc(24% - 2.4em);
+        display: inline-block;
+        text-align: center;
+        border: solid;
+        border-radius: 2em;
+        color: var(--primarycolor);
+        background: var(--tertiarycolor);
+    }
+}
+
+.sportimgs{
+    background-color: var(--primarycolor);
+}
+.sportimgs div a {
+    color: var(--primarycolor);
+}
+
+.sportimgs div a:hover {
+    color: var(--quarternarycolor);
+    transition: var(--maintransition);
+}
+
+
+.headerimage{
+    background: url("../Images/IMG_6650.JPG");
+    text-align: center;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    margin: 0;
+    display: block;
+    color: var(--secondarycolor);
+}
+
+.contentimage img{
+    width: 40vw;
+    max-width: 200px;
+    display: inline;
+    float: right;
+    padding: 10px;
+}
+#swimming, #fencing, #equestrian, #laserrun{
+    scroll-margin-top: 105px;
+}
+.footer a{
+    background: var(--tertiarycolor);
+    margin: 1vw;
+    padding: 10px;
+    color:var(--primarycolor);
+    font-size: 1em;
+    align-content: center;
+}
+
+.footer a:hover{
+    background:var(--quarternarycolor);
+    margin: 1vw;
+    padding: 10px;
+    color: var(--tertiarycolor);
+    font-size: 1em;
+    align-content: center;
+    transition: var(--maintransition);
+}
+
