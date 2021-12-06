@@ -11,6 +11,7 @@
         --tertiarycolor: rgb(255,200,0);
         --quarternarycolor: rgb(100,100,100);
         --maintransition: all 0.4s linear;
+        --navbarheight: 9vh;
     }    
 p, h1,h2,h3,h4,a{
     padding: 10px;
@@ -49,6 +50,10 @@ a {
     flex: 50%;
 }
 
+div.spacer{
+    height: 12vh;
+}
+
 .body a{
     color: blue;
     padding: 0;
@@ -70,14 +75,38 @@ a {
     background-color: var(--quarternarycolor);
 }
 
+.button{
+    background: var(--tertiarycolor);
+    margin: 1vw;
+    padding: 10px;
+    color:var(--primarycolor);
+    font-size: 1em;
+    align-content: center;
+    text-align: center;
+    border-radius: 4px;
+}
+.button a{
+    color:var(--primarycolor);
+}
+.button:hover{
+    background:var(--quarternarycolor);
+    margin: 1vw;
+    padding: 10px;
+    color: var(--tertiarycolor);
+    font-size: 1em;
+    align-content: center;
+    border-radius: 8px;
+    transition: var(--maintransition);
+}
+
 a:hover{
     color: lightgrey;
     transition:var(--maintransition);
 }
 
-br{
+/* br{
     clear: both;
-}
+} */
 header,.footer{
     background-color:var(--primarycolor);
     color: white;
@@ -93,7 +122,7 @@ header{
 }
 
 .logo img{
-    height: 5vh;
+    height: var(--navbarheight);
     max-width: 80vw;
 }
 
@@ -188,7 +217,7 @@ nav a:hover i{
 
 .body h1{
     text-align: center;
-    margin-top: 1em;
+    margin-top: 0.5vh;
 }
 .hub p, .hub a{
     line-height: 0;
@@ -210,7 +239,7 @@ nav a:hover i{
     background: var(--tertiarycolor);
 }
 
-@media screen and (min-width: 350px){
+@media screen and (min-width: 450px){
     .sportimgs div {
         font-size: 1vw;
         margin: 1%;
@@ -242,21 +271,44 @@ nav a:hover i{
 }
 
 
-.headerimage{
-    background: url("../Images/IMG_6650.JPG");
-    text-align: center;
-    height: 50vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    margin: 0;
-    display: block;
-    color: var(--secondarycolor);
+.headerimage img{
+    display: inline;
+    width: 100%;
+}
+@media screen and (min-width: 700px) {
+   section{
+       display: flex;
+       align-items: top;
+       flex-wrap: wrap;
+   }
+    div.home{
+        border-right: 2px solid black;
+   }
+   div.home img{
+       width: 100%;
+       height: 100%;
+   }
+   div.home-content{
+       flex: 3;
+       order: 3;
+       width: 65%;
+   }
+   div.home-content-img{
+       width: 65%;
+   }
+   div.home-callout-img{
+       width: 35%;
+       order: 2;
+   }
+   div.home-callout{
+       order: 4;
+       width: 35%;
+   }
 }
 
-.contentimage img{
+div.contentimage img{
     width: 40vw;
-    max-width: 200px;
+    max-width: 400px;
     display: inline;
     float: right;
     padding: 10px;
@@ -271,6 +323,7 @@ nav a:hover i{
     color:var(--primarycolor);
     font-size: 1em;
     align-content: center;
+    border-radius: 4px;
 }
 
 .footer a:hover{
@@ -281,5 +334,6 @@ nav a:hover i{
     font-size: 1em;
     align-content: center;
     transition: var(--maintransition);
+    border-radius: 8px;
 }
 
