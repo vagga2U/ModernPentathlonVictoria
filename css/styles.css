@@ -216,8 +216,12 @@ nav a:hover i{
 }
 
 .body h1{
-    text-align: center;
+    text-align: left;
     margin-top: 0.5vh;
+}
+
+div.sportimgs h1{
+    text-align: center;
 }
 .hub p, .hub a{
     line-height: 0;
@@ -306,12 +310,18 @@ nav a:hover i{
    }
 }
 
-div.contentimage img{
+/* div.contentimage img{
     width: 40vw;
     max-width: 400px;
     display: inline;
     float: right;
     padding: 10px;
+} */
+img.headimg{
+    display: inline-block;
+    width: 100vw;
+    max-height: 50vh;
+
 }
 #swimming, #fencing, #equestrian, #laserrun{
     scroll-margin-top: 105px;
