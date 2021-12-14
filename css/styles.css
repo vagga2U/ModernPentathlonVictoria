@@ -59,10 +59,20 @@ div.spacer{
     padding: 0;
 }
 
-.hubs{
-    padding: 10px;
+.hubcontainer{
+    display: flex;
+    flex-flow: row wrap;
 }
 
+.hubs{
+    padding: 10px;
+    width: 320px;
+}
+
+.hubmap, .hubmap img{
+    width: 100%;
+    max-width: 640px;
+}
 #topbutton{
     background-color: var(--primarycolor);
     margin: 0.4vw;

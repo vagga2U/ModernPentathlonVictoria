@@ -4,7 +4,7 @@
     --tertiarycolor: rgb(255,200,0);
     --quarternarycolor: rgb(100,100,100);
     --maintransition: all 0.4s linear;
-    --navbarheight: 9vh;
+    --navbarheight: 3vh;
 }   
 body {
   margin: 0;
@@ -14,7 +14,8 @@ body {
 .topnav {
   overflow: hidden;
   background-color:var(--primarycolor);
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 
@@ -31,11 +32,13 @@ body {
 .topnav a:hover {
   background-color:var(--tertiarycolor);
   color: var(--quarternarycolor);
+  transition: var(--maintransition);
 }
 
 .topnav a.active {
   background-color: var(--quarternarycolor);
   color: var(--secondarycolor);
+  transition: var(--maintransition);
 }
 
 .topnav .icon {
@@ -54,24 +57,28 @@ span.logo img{
 }
 
 
-@media screen and (max-width: 920px) {
+
+@media screen and (max-width: 1920px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
+    transition: var(--maintransition);
   }
 }
 
-@media screen and (max-width: 920px) {
-  .topnav.responsive {position: relative;}
+@media screen and (max-width: 1920px) {
+  .topnav.responsive {position: sticky; transition: var(--maintransition);}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
+    transition: var(--maintransition);
   }
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
+    transition: var(--maintransition);
   }
 }
