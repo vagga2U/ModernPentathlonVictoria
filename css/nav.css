@@ -58,7 +58,7 @@ span.logo img{
 
 
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 620px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -67,7 +67,7 @@ span.logo img{
   }
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 620px) {
   .topnav.responsive {position: sticky; transition: var(--maintransition);}
   .topnav.responsive .icon {
     position: absolute;
