@@ -63,17 +63,9 @@ div.spacer{
     height: 12vh;
 }
 
-.body a, .news-item p a, .news-item a{
+.body a{
     color: blue;
     padding: 0;
-}
-
-.news-container{
-    display: flex;
-    flex-flow: row wrap;
-}
-div.news-item{
-    display: inline-flexbox;
 }
 .hubcontainer{
     display: flex;

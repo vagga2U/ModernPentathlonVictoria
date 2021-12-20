@@ -32,7 +32,7 @@ div.news-item{
     display: inline-flexbox;
 }
 
-table{
+table, .table{
     width: 100%;
     padding: 10px;
 }
