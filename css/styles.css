@@ -29,14 +29,14 @@ p, h1,h2,h3,h4,a, table, iframe{
 h4{
     line-height: 0px;
 }
-tr{
-    border-style: solid;
-}
+/* tr{
+    border-style: none;
+} */
 
-td, th{
+/* td, th{
     padding: 0.5rem;
     outline: solid;
-}
+} */
 
 img{
     max-width: 100vw;
@@ -352,6 +352,8 @@ img.headimg{
 #swimming, #fencing, #equestrian, #laserrun{
     scroll-margin-top: 3vh;
 }
+
+
 .footer a{
     background: var(--tertiarycolor);
     margin: 1vw;

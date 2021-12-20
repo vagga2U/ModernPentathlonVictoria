@@ -1,0 +1,45 @@
+:root{
+    --primarycolor: rgb(40,40,100);
+    --secondarycolor: white;
+    --tertiarycolor: rgb(255,200,0);
+    --quarternarycolor: rgb(100,100,100);
+    --maintransition: all 0.4s linear;
+}   
+table{
+    width: 100%;
+    padding: 10px;
+}
+.tg  {
+    border-collapse:collapse;
+    border-color:var(--quarternarycolor);
+    border-spacing:0;
+}
+.tg td{
+    background-color:var(--secondarycolor);
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+.tg th{
+    background-color:var(--primarycolor);
+    color:var(--secondarycolor);
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+.tg .tg-phtq{
+    background-color:var(--quarternarycolor);
+    color: var(--secondarycolor);
+    text-align:left;
+    vertical-align:top;
+
+}
+.tg .tg-fymr{
+    font-weight:bold;
+    text-align:left;
+    vertical-align:top;
+}
+.tg .tg-0pky{    
+    text-align:left;
+    vertical-align:top;
+}
