@@ -30,6 +30,8 @@
 }
 div.news-item{
     display: inline-flexbox;
+    border-radius: 1vh;
+    padding: 10px;
 }
 
 table, .table{
