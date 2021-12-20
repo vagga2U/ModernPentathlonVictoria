@@ -4,7 +4,34 @@
     --tertiarycolor: rgb(255,200,0);
     --quarternarycolor: rgb(100,100,100);
     --maintransition: all 0.4s linear;
-}   
+} 
+
+.news-item p a, .news-item a{
+    color: blue;
+    padding: 0;
+}
+
+.iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0; overflow: hidden;
+    max-width: 100%; height: auto;
+}
+.iframe iframe, .iframe object, .iframe embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.news-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+div.news-item{
+    display: inline-flexbox;
+}
+
 table{
     width: 100%;
     padding: 10px;
