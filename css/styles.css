@@ -63,7 +63,7 @@ div.spacer{
     height: 12vh;
 }
 
-.body a, .news-item a{
+.body a, .news-item p a, .news-item a{
     color: blue;
     padding: 0;
 }
