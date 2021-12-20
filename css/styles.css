@@ -68,6 +68,13 @@ div.spacer{
     padding: 0;
 }
 
+.news-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+div.news-item{
+    display: inline-flexbox;
+}
 .hubcontainer{
     display: flex;
     flex-flow: row wrap;
