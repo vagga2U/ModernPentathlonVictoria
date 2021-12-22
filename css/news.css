@@ -6,6 +6,10 @@
     --maintransition: all 0.4s linear;
 } 
 
+.news-item h1, .news-item h2, .news-item h3, .news-item p{
+    margin: -5px;
+}
+
 .news-item p a, .news-item a{
     color: blue;
     padding: 0;
@@ -27,11 +31,13 @@
 .news-container{
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 div.news-item{
     display: inline-flexbox;
     border-radius: 1vh;
     padding: 10px;
+    max-width: 512px;
 }
 
 table, .table{
