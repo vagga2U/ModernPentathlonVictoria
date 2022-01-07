@@ -71,6 +71,10 @@ table, .table{
     padding:10px 5px;
     word-break:normal;
 }
+
+.cancelled{
+    color: red;
+}
 .tg .tg-phtq{
     background-color:var(--quarternarycolor);
     color: var(--secondarycolor);
