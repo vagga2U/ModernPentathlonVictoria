@@ -13,6 +13,10 @@
         --maintransition: all 0.4s linear;
         --navbarheight: 8vh;
     }    
+
+html{
+    scroll-behavior: smooth;
+}
 p, h1,h2,h3,h4,a, table, iframe{
     padding: 10px;
 }
@@ -102,13 +106,10 @@ div.spacer{
 }
 
 a:hover{
-    color: lightgrey;
+    color: grey;
     transition:var(--maintransition);
 }
 
-/* br{
-    clear: both;
-} */
 header,.footer{
     background-color:var(--primarycolor);
     color: white;
@@ -215,6 +216,25 @@ nav a:hover i{
 .nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
+}
+
+.quicklinks{
+    background-color: var(--tertiarycolor);
+    display: flexbox;
+    width: 100%;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+}
+.button2{
+    color: var(--secondarycolor);
+    background-color: var(--primarycolor);
+    padding: 10px;
+    font-size: 1em;
+    margin: 1vh;
+    align-content: center;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-flex;
 }
 
 .body h1{
