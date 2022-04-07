@@ -319,7 +319,7 @@ button{
        flex-wrap: wrap;
    }
     div.home{
-        border-right: 2px solid black;
+        border: 1px solid grey;
    }
    div.home img{
        width: 100%;
