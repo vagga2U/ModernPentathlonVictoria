@@ -1,0 +1,19 @@
+:root{
+    --primarycolor: rgb(40,40,100);
+    --secondarycolor: white;
+    --tertiarycolor: rgb(255,200,0);
+    --quarternarycolor: rgb(100,100,100);
+    --maintransition: all 0.4s linear;
+} 
+
+div.ruleset-container{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: red;
+}
+
+div.ruleset{
+    flex: 1 1 auto;
+    background-color: aqua;
+}
+
