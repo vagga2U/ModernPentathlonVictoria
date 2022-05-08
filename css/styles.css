@@ -226,13 +226,7 @@ nav a:hover i{
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-.quicklinks{
-    background-color: var(--tertiarycolor);
-    display: flexbox;
-    width: 100%;
-    padding-top: 3vh;
-    padding-bottom: 1vh;
-}
+
 
 
 .body h1{
