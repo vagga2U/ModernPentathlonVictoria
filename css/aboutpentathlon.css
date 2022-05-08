@@ -17,3 +17,23 @@ div.ruleset{
     background-color: aqua;
 }
 
+
+button.quicklinks{
+    padding: 10px;
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
+    border-radius: 5px;
+}
+
+button.quicklinks:hover{
+    cursor: pointer;
+    background-color: var(--quarternarycolor);
+}
+
+.quicklinks{
+    background-color: var(--tertiarycolor);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 3vh;
+}
