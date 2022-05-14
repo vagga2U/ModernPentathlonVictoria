@@ -12,7 +12,7 @@
         --maintransition: all 0.4s linear;
         --navbarheight: 8vh;
     }    
-.calc-container{
+form{
     display: grid;
     grid-template-columns: auto auto auto auto;
     text-align: center;
@@ -32,7 +32,7 @@ button{
     margin-top: 10px;
 }
 
-label, span, button{
+label, span, button, select{
     margin-left: 10px;
 }
 
@@ -93,7 +93,7 @@ div.video{
 
 
 @media screen and (max-width: 1080px){
-    .calc-container{
+    form{
         grid-template-columns: auto auto;
     }
     .calculator{
@@ -102,7 +102,7 @@ div.video{
 }
 
 @media screen and (max-width: 700px){
-    .calc-container{
+    form{
         grid-template-columns: auto;
     }
 
