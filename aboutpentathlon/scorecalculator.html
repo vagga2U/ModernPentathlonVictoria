@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Convert times and results in Modern Pentathlon to scores">
     <title>Score Calculator</title>
+    <link rel="stylesheet" href="../css/athleteresources.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" href="../Images/favicon.png">
-    <script src="https://kit.fontawesome.com/2e97f639f7.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/2e97f639f7.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
     <header>
@@ -36,6 +37,66 @@
         </div>
     </header>         
     <div class="spacer"></div>
+    <h1>Pentathlon Score Calculator</h1>
+    <p>This tool has been developed for athletes and coaches to easily convert their results from time trials and events into pentathlon points.</p>
+    <p>Currently only for 200m swim and 3000m laser-run but will include all events soon!</p>
+    <div class="calc-container">
+        <div class="calculator">
+            <h2>Fence</h2>
+            <label for="victories">Victories:</label>
+            <input type="number" name="victories" id="victories" placeholder="25" min="0" max="100" oninput="fencecalc()">
+            <label for="defeats">Defeats:</label>
+            <input type="number" name="defeats" id="defeats" placeholder="10" min="0" max="100" oninput="fencecalc()">
+            <br>
+            <label for="bouts">Bouts Fenced:</label>
+            <input type="number" name="bouts" id="bouts" onblur="boutinput()" placeholder="35" min="0" max="999">
+            <span id="percentage">Percentage: 71%</span>
+            <br>
+            <label for="bonus">Bonus Victories:</label>
+            <input type="number" name="bonus" id="bonus" placeholder="0" min="0" max="99" oninput="fencecalc()">
+            <label for="seed">Top Seed?</label>
+            <input type="checkbox" name="seed" id="seed" onclick="fencecalc()">
+            <br>
+            <label for="score-Swim">Fence Score:</label>
+            <input type="number" name="score-fence" id="score-fence" oninput="reverse()" placeholder="250" min="0" max="999">
+        </div>
+        <div class="calculator">
+            <h2>Swim</h2>
+            <label for="mm-swim">Swim Time:</label>
+            <input type="number" name="mm-swim" id="mm-swim" max="60" min="0" placeholder="mm" oninput="swimcalc()">
+            <span>:</span>
+            <input type="number" name="ss-swim" id="ss-swim" max="60" min="0" placeholder="ss.00" step="0.01" oninput="swimcalc()">
+            <br>
+            <label for="score-Swim">Swim Score:</label>
+            <input type="number" name="score-swim" id="score-swim" oninput="reverse()" placeholder="250" min="0" max="999">
+        </div>
+        <div class="calculator">
+            <h2>Laser Run</h2>
+            <label for="mm-laserrun">Laser-Run Time:</label>
+            <input type="number" name="mm-laserrun" id="mm-laserrun" max="60" min="0" placeholder="mm" oninput="lasercalc()">
+            <span>:</span>
+            <input type="number" name="ss-laserrun" id="ss-laserrun" max="60" min="0" step="0.1" placeholder="ss.0" oninput="lasercalc()">
+            <br>
+            <label for="score-Swim">Laser-Run Score:</label>
+            <input type="number" name="score-laserrun" id="score-laserrun" oninput="reverse()" placeholder="500" min="0" max="9999">
+        </div>
+            
+        <div class="calculator">
+            <h2>Ride</h2>
+            <label for="score-ride">Ride Score:</label>
+            <input type="number" name="score-ride" id="score-ride" min="0" max="300" value="300" oninput="calc()">
+        </div>
+        
+        <div class="calculator total">
+            <h2>Total Points:</h2>
+            <label for="penalties">Additional Penalties: </label>
+            <input type="number" name="penalties" id="penalties" placeholder="0" min="0" max="999" oninput="calc()">
+            <br>
+            <button type="submit" onclick="calc()">Calculate Score</button>
+            <p id="score-total">Total Score: 1250</p>
+        </div>
+    </div>
+    
     <div class="footer">
         <h1>The best all-round athletes in the world</h1>
         <p>Fencing. Swimming. Equestrian. Shooting. Running.</p>
@@ -47,5 +108,6 @@
         <br><br><br>
         <p>Created by Amos Vagg for Modern Pentathlon Victoria</p>
     </div>
+    <script src="../script.js"></script>
 </body>
 </html>

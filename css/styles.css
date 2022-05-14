@@ -86,7 +86,7 @@ button{
     background-color: var(--tertiarycolor);
     margin-bottom: 5px;
     border-radius: 5px;
-    width: 100%;
+    width: auto;
 }
 
 .button{
