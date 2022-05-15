@@ -4,19 +4,38 @@
     --tertiarycolor: rgb(255,200,0);
     --quarternarycolor: rgb(100,100,100);
     --maintransition: all 0.4s linear;
-} 
+}
 
-div.ruleset-container{
+.thumbnail{
+    height: 2em;
+    width: auto;
+    margin-left: 10px;
+}
+
+div.pathwaysport{
+    flex: 1 1 400px;
+}
+
+div.ruleset-container, div.pathway-container{
     display: flex;
     flex-flow: row wrap;
-    background-color: red;
 }
 
 div.ruleset{
     flex: 1 1 auto;
-    background-color: aqua;
+    padding: 10px;
 }
 
+div.ruleset a{
+    color: blue;
+}
+
+button:hover{
+    transition: var(--maintransition);
+    cursor: pointer;
+    color: var(--primarycolor);
+    background-color: var(--secondarycolor);
+}
 
 button.quicklinks{
     padding: 10px;
