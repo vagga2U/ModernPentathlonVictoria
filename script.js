@@ -62,19 +62,23 @@ function fencereverse(){
     var max = (bouts-target)*points+250;
     var min = 250-(target-1)*points;
     if(rrscore <= -bonus){
-        document.getElementById("score-fence").value = 0+bonus;
+        scorefence = 0+bonus;
+        document.getElementById("score-fence").value = scorefence;
         document.getElementById("victories").value = 0;
         document.getElementById("defeats").value = bouts;
     }else if(rrscore <= min){
-        document.getElementById("score-fence").value = min+bonus;
+        scorefence = min+bonus;
+        document.getElementById("score-fence").value = scorefence;
         document.getElementById("victories").value = 1;
         document.getElementById("defeats").value = bouts-1;
     }else if(rrscore >= max){
-        document.getElementById("score-fence").value = max+bonus;
+        scorefence = max+bonus;
+        document.getElementById("score-fence").value = scorefence;
         document.getElementById("victories").value = bouts;
         document.getElementById("defeats").value = 0;
     }else{
-        document.getElementById("score-fence").value = bonus+boutdif*points+250;
+        scorefence = bonus+boutdif*points+250;
+        document.getElementById("score-fence").value = scorefence;
         document.getElementById("victories").value = bouttarget;
         document.getElementById("defeats").value = bouts-bouttarget;
     }
