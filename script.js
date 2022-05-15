@@ -5,6 +5,25 @@ let scoreride = 0;
 let bouts = 35;
 let swimconst = 550;
 
+function ridereverse(){
+    scoreride = document.getElementById("score-ride").value*1;
+    if(scoreride <= 0){
+        scoreride = 0;
+    }else if(scoreride >= 300){
+        scoreride = 300;
+    }
+    var knockdown = document.getElementById("knockdown").value*7;
+    var disobedience = document.getElementById("disobedience").value*10;
+    var timefaults =  300 - scoreride - knockdown - disobedience;
+    if(timefaults <= 0){
+        timefaults = 0;
+        scoreride = 300 - knockdown - disobedience;
+        document.getElementById("score-ride").value = scoreride;
+    }
+    document.getElementById("timefaults").value = timefaults;
+    calc()
+}
+
 function fencereverse(){
     //Check Number of bouts
     bouts = document.getElementById("bouts").value*1;
@@ -66,7 +85,7 @@ function fencereverse(){
 }
 function reverselaserrun(){
     var goallaserrun = document.getElementById("laserrun-distance").value
-    scorelaserrun = document.getElementById("score-laserrun").value;
+    scorelaserrun = document.getElementById("score-laserrun").value*1;
     if(goallaserrun == "3000m"){
         laserrunconst = 1300;
     }else if(goallaserrun == "2400m"){
@@ -92,7 +111,7 @@ function reverselaserrun(){
 
 function reverseswim(){
     var goalswim = document.getElementById("swim-distance").value
-    scoreswim = document.getElementById("score-swim").value;
+    scoreswim = document.getElementById("score-swim").value*1;
     if(goalswim == "200m"){
         swimconst = 550;
     }else if(goalswim == "100m"){

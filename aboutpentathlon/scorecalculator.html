@@ -46,16 +46,16 @@
             <div class="calculator">
                 <h2>Fence</h2>
                 <label for="victories">Victories:</label>
-                <input type="number" name="victories" id="victories" placeholder="25" min="0" max="100" onblur="fencecalc()">
+                <input type="number" name="victories" id="victories" placeholder="25" min="0" max="100" oninput="fencecalc()">
                 <label for="defeats">Defeats:</label>
-                <input type="number" name="defeats" id="defeats" placeholder="10" min="0" max="100" onblur="fencecalc()">
+                <input type="number" name="defeats" id="defeats" placeholder="10" min="0" max="100" oninput="fencecalc()">
                 <br>
                 <label for="bouts">Bouts Fenced:</label>
                 <input type="number" name="bouts" id="bouts" onblur="boutinput()" placeholder="35" min="0" max="999">
                 <span id="percentage">Percentage: 71%</span>
                 <br>
                 <label for="bonus">Bonus Victories:</label>
-                <input type="number" name="bonus" id="bonus" placeholder="0" min="0" max="99" onblur="fencecalc()">
+                <input type="number" name="bonus" id="bonus" placeholder="0" min="0" max="99" oninput="fencecalc()">
                 <label for="seed">Top Seed?</label>
                 <input type="checkbox" name="seed" id="seed" onclick="fencecalc()">
                 <br>
@@ -100,16 +100,16 @@
             <div class="calculator">
                 <h2>Ride</h2>
                 <label for="knockdown">Knockdowns (7):</label>
-                <input type="number" name="knockdown" id="knockdown" placeholder="0" min="0" max="99" onblur="ridecalc()">
+                <input type="number" name="knockdown" id="knockdown" placeholder="0" min="0" max="99" oninput="ridecalc()">
                 <br>
                 <label for="disobedience">Disobedience (10):</label>
-                <input type="number" name="disobedience" id="disobedience" placeholder="0" min="0" max="99" onblur="ridecalc()">
+                <input type="number" name="disobedience" id="disobedience" placeholder="0" min="0" max="99" oninput="ridecalc()">
                 <br>
                 <label for="timefaults">Time Penalties: </label>
-                <input type="number" name="timefaults" id="timefaults" placeholder="ss" min="0" max="99" onblur="ridecalc()">
+                <input type="number" name="timefaults" id="timefaults" placeholder="ss" min="0" max="99" oninput="ridecalc()">
                 <br>
                 <label for="score-ride">Ride Score:</label>
-                <input type="number" name="score-ride" id="score-ride" min="0" max="300" value="300" oninput="calc()">
+                <input type="number" name="score-ride" id="score-ride" min="0" max="300" placeholder="300" onblur="ridereverse()">
             </div>
             
             <div class="calculator total">
