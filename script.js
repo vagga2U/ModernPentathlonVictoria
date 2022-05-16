@@ -4,6 +4,7 @@ let scoreswim = 0;
 let scoreride = 0;
 let bouts = 35;
 let swimconst = 550;
+let laserrunconst = 1300;
 
 function ridereverse(){
     scoreride = document.getElementById("score-ride").value*1;
@@ -94,7 +95,7 @@ function reverselaserrun(){
         laserrunconst = 1300;
     }else if(goallaserrun == "2400m"){
         laserrunconst = 1130;
-    }else if(goallaserrun == "1800"){
+    }else if(goallaserrun == "1800m"){
         laserrunconst = 960;
     }else if(goallaserrun == "900m"){
         laserrunconst = 820;
@@ -151,10 +152,22 @@ function boutinput(){
 
 function lasercalc(){
     // laserrun
+    var goallaserrun = document.getElementById("laserrun-distance").value
+    if(goallaserrun == "3000m"){
+        laserrunconst = 1300;
+    }else if(goallaserrun == "2400m"){
+        laserrunconst = 1130;
+    }else if(goallaserrun == "1800m"){
+        laserrunconst = 960;
+    }else if(goallaserrun == "900m"){
+        laserrunconst = 820;
+    }else if(goallaserrun == "600m"){
+        laserrunconst = 740;
+    }
     var mmlaserrun = document.getElementById("mm-laserrun").value*1;
     var sslaserrun = document.getElementById("ss-laserrun").value*1;
     var timelaserrun = Math.floor(60*mmlaserrun+sslaserrun);
-    scorelaserrun = 1300 - timelaserrun;
+    scorelaserrun = laserrunconst - timelaserrun;
     if(scorelaserrun < 0){
         scorelaserrun = 0;
     }
