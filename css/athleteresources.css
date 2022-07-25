@@ -19,6 +19,13 @@ form{
     padding: 10px;
 }
 
+button:hover{
+    transition: var(--maintransition);
+    cursor: pointer;
+    color: var(--primarycolor);
+    background-color: var(--secondarycolor);
+}
+
 .total{
     grid-column: 1 / -1;
 }
