@@ -81,6 +81,16 @@ img.min{
     object-fit: scale-down;
 }
 
+/* Two Column Layout in textbox */
+.multiColumn {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    margin: 10px;
+  }
+
 @media screen and (min-width: 800px){
     div.news-item{
         width: 50%;
