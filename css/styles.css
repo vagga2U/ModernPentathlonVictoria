@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     }
-
+/* Colour Scheme */
 :root{
         --primarycolor: rgb(40,40,100);
         --secondarycolor: white;
@@ -13,7 +13,7 @@
         --maintransition: all 0.4s linear;
         --navbarheight: 8vh;
     }    
-
+/* Make it nice */
 html{
     scroll-behavior: smooth;
 }
@@ -28,6 +28,37 @@ img{
 }
 a {
     text-decoration: none;
+    color: var(--secondarycolor);
+}
+button {
+    display: inline-block;
+    padding: 10px 50px;
+    margin: 10px;
+    background-color: var(--tertiarycolor);
+    color: var(--secondarycolor);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover{
+    background-color: var(--quarternarycolor);
+    color: var(--secondarycolor);
+    transition: var(--maintransition);
+}
+
+/* Anchor (link) styles */
+a {
+    color: var(--quarternarycolor);
+    text-decoration: none;
+}
+
+/* Anchor (link) styles on hover */
+a:hover {
+    text-decoration: underline;
     color: var(--secondarycolor);
 }
 .indent{
@@ -51,10 +82,6 @@ div.spacer{
     height: 8vh;
 }
 
-.body a{
-    color: blue;
-    padding: 0;
-}
 .hubcontainer{
     display: flex;
     flex-flow: row wrap;
@@ -81,40 +108,8 @@ div.spacer{
     background-color: var(--quarternarycolor);
 }
 
-button{
-    padding: 5px;
-    background-color: var(--tertiarycolor);
-    margin-bottom: 5px;
-    border-radius: 5px;
-    width: auto;
-}
-
-.button{
-    background: var(--tertiarycolor);
-    margin: 1vw;
-    padding: 10px;
-    color:var(--primarycolor);
-    font-size: 1em;
-    align-content: center;
-    text-align: center;
-    border-radius: 4px;
-}
-.button a{
-    color:var(--primarycolor);
-}
-.button:hover{
-    background:var(--quarternarycolor);
-    margin: 1vw;
-    padding: 10px;
-    color: var(--tertiarycolor);
-    font-size: 1em;
-    align-content: center;
-    border-radius: 8px;
-    transition: var(--maintransition);
-}
-
 a:hover{
-    color: grey;
+    color: var(--quarternarycolor);
     transition:var(--maintransition);
 }
 
@@ -292,78 +287,14 @@ img.full{
     width: 100%;
 }
 
+img.inline{
+    border-radius: 1em;
+    width: 95%;
+}
+
 .headerimage img{
     display: inline;
     width: 100%;
-}
-@media screen and (min-width: 700px) {
-   section{
-       display: flex;
-       align-items: top;
-       flex-wrap: wrap;
-   }
-    div.home{
-        border: 1px solid grey;
-   }
-   div.home img{
-       width: 100%;
-       height: 100%;
-   }
-   div.home-calendar img{
-       display: none;
-   }
-   div.home-content{
-       order: 3;
-       width: 60%;
-   }
-   div.home-content-img{
-       width: 60%;
-       min-width: 300px;
-
-   }
-   div.home-callout-img{
-       width: 40%;
-       order: 2;
-   }
-   div.home-callout{
-       order: 4;
-       width: 40%;
-   }
-
-   div.home-calendar{
-       order: 5;
-       flex:3;
-   }
-}
-
-@media screen and (min-width: 1300px) {
-    div.home-calendar img{
-        display: inline-block;
-        height: auto;
-    }
-    div.home-calendar{
-        order: 1;
-        flex:1;
-    }
-    div.home-content{
-        order: 3;
-    }
-    div.home-content-img{
-        width: 40%;
-        min-width: 300px;
-    }
-
-    div.home-content-img img{
-        object-fit: cover;
-    }
-    div.home-callout-img{
-        width: 40%;
-        order: 2;
-    }
-    div.home-callout{
-        order: 4;
-        width: 40%;
-    }
 }
 
 img.headimg{
@@ -376,7 +307,85 @@ img.headimg{
     scroll-margin-top: 3vh;
 }
 
+/* Flexbox layout for the section and its contents */
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .centre, button.centre{
+    display: block;
+    text-align: center;
+  }
+  /* Small area for homeText */
+  .homeText {
+    padding: 10px;
+    box-sizing: border-box; 
+  }  
+  /* Longer vertical space for homeContent */
+  .homeContent {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Style for the image */
+  .homeContent img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
 
+  /* div flex basis */
+  .div1 {
+    flex-basis: 30%;
+  }
+
+  .div2 {
+    flex-basis: 50%;
+  }
+  
+  .div5 {
+    flex-basis: 20%;
+  }
+
+  .div3, .div4 {
+    flex-basis: 50%;
+  }
+
+  div.quicklinks button {
+    width: 90%;
+  }
+  /* Smaller than Laptop */
+  @media screen and (max-width: 1300px){
+    .div5 {
+        display: none;
+    }
+    .div1, .div2 {
+        flex-basis: 50%;
+    }
+    }
+/* Smaller than Tablet */
+@media screen and (max-width: 850px){
+    .div2 {
+        display: none;
+    }
+    .div1, .div3, .div4 {
+        flex-basis: 100%;
+    }
+    }
+/* Two Column Layout in textbox */
+.multiColumn {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    margin: 10px;
+  }
+
+/* Footer Styling */
 .footer a{
     background: var(--tertiarycolor);
     margin: 1vw;

@@ -1,3 +1,5 @@
+
+//Stuff for score Calculator
 let scorelaserrun = 0;
 let scorefence = 0;
 let scoreswim = 0;

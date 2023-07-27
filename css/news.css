@@ -18,11 +18,12 @@ button{
     margin-bottom: 5px;
     border-radius: 5px;
     width: 100%;
+    color: var(--quarternarycolor)
 }
 
 button:hover{
     cursor: pointer;
-    color: var(--quarternarycolor);
+    color: var(--secondarycolor);
 }
 
 div.news-item button a{

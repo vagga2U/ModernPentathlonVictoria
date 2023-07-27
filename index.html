@@ -10,7 +10,12 @@
         <!-- Title Webpage displayed in tab -->
         <title>Home - Modern Pentathlon Victoria</title>
         <link rel="stylesheet" href="./css/styles.css">
+        <!-- Icons library -->
         <script src="https://kit.fontawesome.com/2e97f639f7.js" crossorigin="anonymous"></script>
+        <!-- Include jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Include your custom script.js file -->
+        <script src="./Scripts/home.js"></script>
         <link rel="icon" href="./Images/favicon.png">
     </head>
     <!-- Displayed elements of the page -->
@@ -41,36 +46,55 @@
         </header>        
         <div class="spacer"></div>
         <section class=body>
-            <div class="home home-content-img"> 
-                <picture>
-                    <img
-                      src="Images/mpvgrouphorizontal.jpg" 
-                      alt="Modern Pentathlon Victoria Athletes"
-                    />
-                  </picture>         
+            <div class="homeContent div2">
+                <h2>Get Started in Modern Pentathlon</h2>
+                   <p>Want to learn more about Modern Pentathlon and how you can train and compete? Contact a <a class="default" href="./getinvolved">local training hub: </a></p>  
+                   <div class=""><button><a href="./getinvolved">Get Involved</a></button></div>                   
+                    <a class="default" href="./getinvolved"><img src="./Images/training_hub_map.png" alt="Map of Training Hubs"></a>
             </div>
-            <div class="home home-content">
+            <div class="homeText div1">
+                <h1>Upcoming 2023 Pentathlon Events:</h1>
+                <ul>
+                    <li>21-28 Aug &emsp; World Pentathlon Championships, Bath UK</li>
+                    <li>19-20 Aug &emsp; World Laser Run Championships, Bath UK</li>
+                    <li>26-27 Aug &emsp; Benalla Tetrathlon, Benalla VIC</li>
+                    <li>29-02 Sep &emsp; African/Oceania Pentathlon Championships, Cairo EG</li>
+                    <li>25-27 Sep &emsp; PCA National Victorian Ride Hub (Tetrathlon, Showjumping, Dressage), TBC</li>
+                    <li>02-08 Oct &emsp; National Pony Club Championships, Perth WA</li>
+                    <li>TBC - Oct &emsp; MPV Hub Championships, Melbourne VIC</li>
+                    <li>22 Oct &emsp; &emsp; Penthurst Come Try Pentathlon, Penthurst VIC</li>
+                    <li>29 Oct &emsp; &emsp; Ringwood Tetrathlon, Ringwood VIC</li>
+                    <li>01-05 Nov &emsp; World Biathle and Triathle Championships, Bali ID</li>
+                    <li>18-19 Nov &emsp; MPV Triathle and Laser-Run, Geelong VIC</li>
+                    <li>09-10 Dec &emsp; PCV State Tetrathlon Championships, TBC VIC</li>
+                </ul>
+                <br>
+                <p>Access information and entry forms for upcoming Pentathlon and Tetrathlon events:</p>
+                <div class=""><button><a href="./calendar">View Calendar</a></button></div>
+            </div>
+            <div class="homeText div5">
+                <h1>QuickLinks:</h1>
+                <div class="quicklinks"><button><a href="./pentathlonnews.html">Latest News</a></button></div>
+                <div class="quicklinks"><button><a href="./aboutpentathlon/pentathlonrules.html">Pentathlon Rules</a></button></div>
+                <div class="quicklinks"><button><a href="./aboutpentathlon/scorecalculator.html">Score Calculator</a></button></div>
+                <div class="quicklinks"><button><a href="./aboutpentathlon/athleteresources.html">Athlete Resources</a></button></div>
+                <img class="inline " src="./Images/mpvgroupvertical.jpg" alt="Victorian Triathle Competitors standing for photo">
+            </div>
+            <div class="homeContent div3">
                 <h1 class="body heading">Modern Pentathlon Victoria</h1>
                 <p class="body">Modern Pentathlon Victoria is the governing body for the sport of Modern Pentathlon throughout Victoria and enable athletes from around Vicotria to get involved in Modern Pentathlon. </p>
                 <p>Modern Pentathlon Victoria run come and try days for everyone to have a go. If you wish to try out the sport, or host a come and try day at your Pony Club or organisation, please contact your local hub or Modern Pentathlon Victoria. </p>
+                <picture>
+                    <img 
+                      class="inline"
+                      src="./Images/vicPodiumLaserNationals2023cropped.JPEG" 
+                      alt="Modern Pentathlon Victoria Athletes on Podium"
+                    />
+                  </picture>     
             </div>
-            <div class="home home-calendar"><h1>MPV Calendar 2023</h1>  
-                <p>Modern Pentathlon Victoria's updated competition Calendar is now available! </p>
-                <p>Access information and entry forms for upcoming Pentathlon and Tetrathlon events.</p>
-                <button><a href="./calendar">View Calendar</a></button>
-              <img class="full" src="./Images/calendar.jpg" alt="Calendar">
-              </div>
-            <div class="home home-callout">
-                <h2>Get Started in Modern Pentathlon</h2>
-                <p>
-                    Want to learn more about Modern Pentathlon and how you can train and compete? Contact a <a class="default" href="./getinvolved">local training hub: </a>
-                    <div class="button">
-                        <a href="./getinvolved">Get Involved</a>
-                    </div>
+            <!-- News Item -->
+            <div class="homeContent div4" id="latestNews">
             </div>
-            <div class="home home-callout-img">
-                <a class="default" href="./getinvolved"><img src="./Images/training_hub_map.png" alt="Map of Training Hubs"></a>
-            </div>   
     
         </section>        
         
