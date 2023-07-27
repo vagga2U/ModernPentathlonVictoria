@@ -41,7 +41,7 @@ div.calculator{
 
 button{
     margin-top: 10px;
-    color: var(--quarternarycolor)
+    color: var(--quarternarycolor)  
 }
 
 label, span, button, select{
