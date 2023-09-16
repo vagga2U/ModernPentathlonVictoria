@@ -38,7 +38,6 @@ button:hover{
 }
 
 button.quicklinks{
-    padding: 10px;
     background-color: var(--primarycolor);
     color: var(--secondarycolor);
     border-radius: 5px;
@@ -52,7 +51,7 @@ button.quicklinks:hover{
 .quicklinks{
     background-color: var(--tertiarycolor);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding-top: 3vh;
 }
