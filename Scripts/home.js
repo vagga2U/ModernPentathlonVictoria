@@ -1,5 +1,5 @@
 
 //on document load, load news item
 $(document).ready(function() {
-    $("#latestNews").load("../pentathlonnews.html #20230901");
+    $("#latestNews").load("../pentathlonnews.html #20231112");
   });

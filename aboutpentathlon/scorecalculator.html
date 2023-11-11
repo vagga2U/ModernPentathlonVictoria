@@ -43,86 +43,95 @@
     <p>This tool has been developed for athletes and coaches to easily convert their results from time trials and events into pentathlon points.</p>
     <p>Currently includes all distances set out in the 2022 UIPM competition rules for individual events. Relay, Pony Club Tetrathlon, and historical rule sets will be added in a future update.</p>
     <p>Curious how your times compare? Check out Modern Pentathlon Australia's <a class="body" href="../files/MP-New-Format-Benchmarks-May-2022.pdf">performance benchmarks</a> to see where your times fall for athlete categorisation</p>
-    <div class="calc-container">
-        <form action="">
-            <div class="calculator">
-                <h2>Fence</h2>
-                <label for="victories">Victories:</label>
-                <input type="number" name="victories" id="victories" placeholder="25" min="0" max="100" oninput="fencecalc()">
-                <label for="defeats">Defeats:</label>
-                <input type="number" name="defeats" id="defeats" placeholder="10" min="0" max="100" oninput="fencecalc()">
-                <br>
-                <label for="bouts">Bouts Fenced:</label>
-                <input type="number" name="bouts" id="bouts" onblur="boutinput()" placeholder="35" min="0" max="999">
-                <span id="percentage">Percentage: 71%</span>
-                <br>
-                <label for="bonus">Bonus Victories:</label>
-                <input type="number" name="bonus" id="bonus" placeholder="0" min="0" max="99" oninput="fencecalc()">
-                <label for="seed">Top Seed?</label>
-                <input type="checkbox" name="seed" id="seed" onclick="fencecalc()">
-                <br>
-                <label for="score-Swim">Fence Score:</label>
-                <input type="number" name="score-fence" id="score-fence" onblur="fencereverse()" placeholder="250" min="0" max="999">
+
+    <!-- Collapsible Containers -->
+        <button type="button" class="collapsible">Modern Pentathlon - UIPM 2022</button>
+            <div class="content">
+                <form action="">
+                    <div class="calculator">
+                        <h2>Fence</h2>
+                        <label for="victories">Victories:</label>
+                        <input type="number" name="victories" id="victories" placeholder="25" min="0" max="100" oninput="fencecalc()">
+                        <label for="defeats">Defeats:</label>
+                        <input type="number" name="defeats" id="defeats" placeholder="10" min="0" max="100" oninput="fencecalc()">
+                        <br>
+                        <label for="bouts">Bouts Fenced:</label>
+                        <input type="number" name="bouts" id="bouts" onblur="boutinput()" placeholder="35" min="0" max="999">
+                        <span id="percentage">Percentage: 71%</span>
+                        <br>
+                        <label for="bonus">Bonus Victories:</label>
+                        <input type="number" name="bonus" id="bonus" placeholder="0" min="0" max="99" oninput="fencecalc()">
+                        <label for="seed">Top Seed?</label>
+                        <input type="checkbox" name="seed" id="seed" onclick="fencecalc()">
+                        <br>
+                        <label for="score-Swim">Fence Score:</label>
+                        <input type="number" name="score-fence" id="score-fence" onblur="fencereverse()" placeholder="250" min="0" max="999">
+                    </div>
+                    <div class="calculator">
+                        <h2>Swim</h2>
+                        <select name="swim-distance" id="swim-distance" onchange="swimcalc()">
+                            <option value="200m">200m</option>
+                            <option value="100m">100m</option>
+                            <option value="50m">50m</option>
+                        </select>
+                        <br>
+                        <label for="mm-swim">Swim Time:</label>
+                        <input type="number" name="mm-swim" id="mm-swim" max="60" min="0" placeholder="mm" oninput="swimcalc()">
+                        <span>:</span>
+                        <input type="number" name="ss-swim" id="ss-swim" max="60" min="0" placeholder="ss.00" step="0.01" oninput="swimcalc()">
+                        <br>
+                        <label for="score-Swim">Swim Score:</label>
+                        <input type="number" name="score-swim" id="score-swim" oninput="reverseswim()" placeholder="250" min="0" max="999">
+                    </div>
+                    <div class="calculator">
+                        <h2>Laser Run</h2>
+                        <select name="laserrun-distance" id="laserrun-distance" onchange="lasercalc()">
+                            <option value="3000m">3000m</option>
+                            <option value="2400m">2400m</option>
+                            <option value="1800m">1800m</option>
+                            <option value="900m">900m</option>
+                            <option value="600m">600m</option>
+                        </select>
+                        <br>
+                        <label for="mm-laserrun">Laser-Run Time:</label>
+                        <input type="number" name="mm-laserrun" id="mm-laserrun" max="60" min="0" placeholder="mm" oninput="lasercalc()">
+                        <span>:</span>
+                        <input type="number" name="ss-laserrun" id="ss-laserrun" max="60" min="0" step="0.1" placeholder="ss.0" oninput="lasercalc()">
+                        <br>
+                        <label for="score-Swim">Laser-Run Score:</label>
+                        <input type="number" name="score-laserrun" id="score-laserrun" oninput="reverselaserrun()" placeholder="500" min="0" max="9999">
+                    </div>
+                        
+                    <div class="calculator">
+                        <h2>Ride</h2>
+                        <label for="knockdown">Knockdowns (7):</label>
+                        <input type="number" name="knockdown" id="knockdown" placeholder="0" min="0" max="99" oninput="ridecalc()">
+                        <br>
+                        <label for="disobedience">Disobedience (10):</label>
+                        <input type="number" name="disobedience" id="disobedience" placeholder="0" min="0" max="99" oninput="ridecalc()">
+                        <br>
+                        <label for="timefaults">Time Penalties: </label>
+                        <input type="number" name="timefaults" id="timefaults" placeholder="ss" min="0" max="99" oninput="ridecalc()">
+                        <br>
+                        <label for="score-ride">Ride Score:</label>
+                        <input type="number" name="score-ride" id="score-ride" min="0" max="300" placeholder="300" onblur="ridereverse()">
+                    </div>
+                    
+                    <div class="calculator total">
+                        <h2>Total Points:</h2>
+                        <label for="penalties">Additional Penalties: </label>
+                        <input type="number" name="penalties" id="penalties" placeholder="0" min="0" max="999" oninput="calc()">
+                        <br>
+                        <h3 id="score-total">Total Score: </h3>
+                    </div>
+                </form>
             </div>
-            <div class="calculator">
-                <h2>Swim</h2>
-                <select name="swim-distance" id="swim-distance" onchange="swimcalc()">
-                    <option value="200m">200m</option>
-                    <option value="100m">100m</option>
-                    <option value="50m">50m</option>
-                </select>
-                <br>
-                <label for="mm-swim">Swim Time:</label>
-                <input type="number" name="mm-swim" id="mm-swim" max="60" min="0" placeholder="mm" oninput="swimcalc()">
-                <span>:</span>
-                <input type="number" name="ss-swim" id="ss-swim" max="60" min="0" placeholder="ss.00" step="0.01" oninput="swimcalc()">
-                <br>
-                <label for="score-Swim">Swim Score:</label>
-                <input type="number" name="score-swim" id="score-swim" oninput="reverseswim()" placeholder="250" min="0" max="999">
-            </div>
-            <div class="calculator">
-                <h2>Laser Run</h2>
-                <select name="laserrun-distance" id="laserrun-distance" onchange="lasercalc()">
-                    <option value="3000m">3000m</option>
-                    <option value="2400m">2400m</option>
-                    <option value="1800m">1800m</option>
-                    <option value="900m">900m</option>
-                    <option value="600m">600m</option>
-                </select>
-                <br>
-                <label for="mm-laserrun">Laser-Run Time:</label>
-                <input type="number" name="mm-laserrun" id="mm-laserrun" max="60" min="0" placeholder="mm" oninput="lasercalc()">
-                <span>:</span>
-                <input type="number" name="ss-laserrun" id="ss-laserrun" max="60" min="0" step="0.1" placeholder="ss.0" oninput="lasercalc()">
-                <br>
-                <label for="score-Swim">Laser-Run Score:</label>
-                <input type="number" name="score-laserrun" id="score-laserrun" oninput="reverselaserrun()" placeholder="500" min="0" max="9999">
-            </div>
-                
-            <div class="calculator">
-                <h2>Ride</h2>
-                <label for="knockdown">Knockdowns (7):</label>
-                <input type="number" name="knockdown" id="knockdown" placeholder="0" min="0" max="99" oninput="ridecalc()">
-                <br>
-                <label for="disobedience">Disobedience (10):</label>
-                <input type="number" name="disobedience" id="disobedience" placeholder="0" min="0" max="99" oninput="ridecalc()">
-                <br>
-                <label for="timefaults">Time Penalties: </label>
-                <input type="number" name="timefaults" id="timefaults" placeholder="ss" min="0" max="99" oninput="ridecalc()">
-                <br>
-                <label for="score-ride">Ride Score:</label>
-                <input type="number" name="score-ride" id="score-ride" min="0" max="300" placeholder="300" onblur="ridereverse()">
-            </div>
+        <button type="button" class="collapsible">Pony Club Tetrathlon - PCA 2023 (UNDER DEVELOPMENT!)</button>
+            <div class="content">
             
-            <div class="calculator total">
-                <h2>Total Points:</h2>
-                <label for="penalties">Additional Penalties: </label>
-                <input type="number" name="penalties" id="penalties" placeholder="0" min="0" max="999" oninput="calc()">
-                <br>
-                <h3 id="score-total">Total Score: </h3>
             </div>
-        </div>
-        </form>
+    
+
        
     
     <div class="footer">
@@ -136,5 +145,6 @@
         <br><br><br>
         <p>Created by Amos Vagg for Modern Pentathlon Victoria</p>
     </div>
+    <script src="../Scripts/collapsible.js"></script>
 </body>
 </html>
