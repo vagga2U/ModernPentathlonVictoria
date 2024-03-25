@@ -85,13 +85,13 @@ div.spacer{
 }
 
 .hubs{
-    padding: 10px;
+    padding: 5px;
     width: 320px;
 }
 
 .hubmap, .hubmap img{
     width: 100%;
-    max-width: 640px;
+    max-width: 440px;
 }
 #topbutton{
     background-color: var(--primarycolor);
