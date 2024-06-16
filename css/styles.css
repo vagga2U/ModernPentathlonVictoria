@@ -12,7 +12,13 @@
         --quarternarycolor: rgb(100,100,100);
         --maintransition: all 0.4s linear;
         --navbarheight: 8vh;
+
     }    
+/* Text Styles */
+
+.MPV{
+    background-color: var(--tertiarycolor);
+}
 /* Make it nice */
 html{
     scroll-behavior: smooth;
@@ -27,6 +33,7 @@ img{
     max-width: 100vw;
 }
 
+  
 button {
     display: inline-block;
     padding: 10px 50px;
@@ -70,7 +77,9 @@ a:hover {
 .columngroup{
     display: flex;
 }
-
+.block{
+    flex: 100%;
+}
 .column{
     flex: 50%;
 }
@@ -306,6 +315,10 @@ img.headimg{
     justify-content: space-between;
     align-items: stretch;
   }
+
+  .block{
+    display: inline;
+  }
   
   /* Small area for homeText */
   .homeText {
@@ -362,13 +375,14 @@ img.headimg{
         flex-basis: 50%;
     }
     .div3{
-        order: 1;
+        order: 2;
     }
     .div4 {
-        display: none;
+        order: 2;
+        flex-basis: 50%;
     }
     .div5{
-        order: 2;
+        order: 1;
         flex-basis: 30%;
     }
     .extra{
@@ -383,7 +397,7 @@ img.headimg{
     }
     .div4{
         display: inline-block;
-        order: 5;
+        order: 2;
     }
     .div1, .div2, .div3, .div4, .div5 {
         flex-basis: 100%;
@@ -401,6 +415,7 @@ img.headimg{
     flex: 1;
     margin: 10px;
   }
+
 
 /* Footer Styling */
 .footer a{
