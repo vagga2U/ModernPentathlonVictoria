@@ -39,7 +39,7 @@ button {
     padding: 10px 50px;
     margin: 10px;
     background-color: var(--tertiarycolor);
-    color: var(--secondarycolor);
+    color: var(--quarternarycolor);
     border: none;
     border-radius: 4px;
     cursor: pointer;
